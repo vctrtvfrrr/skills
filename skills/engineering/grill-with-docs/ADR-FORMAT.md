@@ -7,20 +7,36 @@ Create the `docs/adr/` directory lazily — only when the first ADR is needed.
 ## Template
 
 ```md
-# {Short title of the decision}
+---
+number: {NNN}
+title: {Short title of the decision}
+date: {YYYY-MM-DD}
+author: {Name}
+status: proposed | accepted | deprecated | superseded by ADR-NNNN
+---
 
-{1-3 sentences: what's the context, what did we decide, and why.}
+## Context
+
+{What situation forced this decision? What constraints or forces are at play?}
+
+## Decision
+
+{What did we decide to do?}
+
+## Rationale
+
+{Why this option? What specific reasons drove the choice?}
 ```
 
-That's it. An ADR can be a single paragraph. The value is in recording *that* a decision was made and *why* — not in filling out sections.
+The three required sections are **Context**, **Decision**, and **Rationale**. Together they answer: what was the situation, what did we choose, and why.
 
 ## Optional sections
 
 Only include these when they add genuine value. Most ADRs won't need them.
 
-- **Status** frontmatter (`proposed | accepted | deprecated | superseded by ADR-NNNN`) — useful when decisions are revisited
-- **Considered Options** — only when the rejected alternatives are worth remembering
+- **Considered Alternatives** — only when rejected alternatives are worth remembering (prevents re-litigating the same options later)
 - **Consequences** — only when non-obvious downstream effects need to be called out
+- **References** — links to external docs, benchmarks, or prior art that informed the decision
 
 ## Numbering
 
